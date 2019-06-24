@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 91 41" style="enable-background:new 0 0 91 41;" xml:space="preserve">
+<style type="text/css">
+	.svc_mountain{stroke:#594A42 !important;}
+	.svc_sun{stroke:#F7941E !important;}
+	.svc_smoke{stroke:#4DB89C !important;}
+    .svc_linija{fill:none;stroke:#1A1A18;stroke-width:0.5669;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256;}
+</style>
+    <script xlink:href="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js" />
+<script>
+    var d=document;
+    var s1;
+    var s2;
+    var s3;
+    var s4;
+    var scs_anim = new TimelineMax({repeat:-1});
+    scs_anim.pause();
+    
+    window.onload = function(){
+        s1 = d.getElementById("scs1");
+        s2 = d.getElementById("scs2");
+        s3 = d.getElementById("scs3");
+        s4 = d.getElementById("scs4");
+        
+        s1.style.strokeDasharray = "2.45 1.5 1.8 1.6 3 0";
+        s1.style.strokeDashoffset = 10.35;
+        s2.style.strokeDasharray = "0.9 1.4 2.5 1.2 3.8 0.55";
+        s2.style.strokeDashoffset = 10.35;
+        s3.style.strokeDasharray = "2.45 1.5 1.8 1.6 1.2 1.8";
+        s3.style.strokeDashoffset = 10.35;
+        s4.style.strokeDasharray = "0.9 1.4 3.4 1.7 2.4 0.55";
+        s4.style.strokeDashoffset = 10.35;
+    
+        scs_anim
+        .to(s1, 4, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(s2, 4, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(s3, 4, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(s4, 4, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0);
+        
+    }
+    
+    
+    d.Play = function(){
+        TweenMax.to("#svg_coffe_mountain", 0.5, {css:{stroke:"#594A42"}});
+        //TweenMax.to("#svg_coffe_sun", 0.5, {css:{stroke:"#F7941E"}});
+        TweenMax.to("#svg_coffe_smoke", 0.5, {css:{stroke:"#1f1f1f"}});
+        scs_anim.play();
+    }
+    
+    d.Stop = function(){
+        TweenMax.to("#svg_coffe_mountain", 0.5, {css:{stroke:"#1A1A18"}});
+        //TweenMax.to("#svg_coffe_sun", 0.5, {css:{stroke:"#1A1A18"}});
+        TweenMax.to("#svg_coffe_smoke", 0.5, {css:{stroke:"#1A1A18"}});
+        scs_anim.pause();
+    }
+    d.Line = function(d){
+        var x = document.getElementsByClassName("svc_linija");
+        var i;
+        for (i = 0; x.length > i; i++) {
+            x[i].style.strokeWidth = d;
+        }
+    }
+</script>
+<g id="svg_coffe_fonas" class="svc_linija">
+	<path d="M20.93,1H71c1.32,0,2.4,1.08,2.4,2.4v32.52H18.53V3.4C18.53,2.08,19.61,1,20.93,1z"/>
+	<path d="M17.44,35.91h57.98 M74.58,39.78H16.7"/>
+	<path d="M20.9,4.74h50.15c0.22,0,0.39,0.18,0.39,0.39v26.65c0,0.22-0.18,0.39-0.39,0.39H20.9
+		c-0.22,0-0.39-0.18-0.39-0.39V5.13C20.5,4.92,20.68,4.74,20.9,4.74z"/>
+	<path d="M37.56,35.91h16.82c0.07,0,0.13,0.06,0.13,0.13v0.37c0,0.28-0.23,0.5-0.5,0.5H37.93c-0.28,0-0.5-0.23-0.5-0.5
+		v-0.37C37.43,35.97,37.48,35.91,37.56,35.91z"/>
+	<line x1="23.92" y1="9.26" x2="68.02" y2="9.26"/>
+	<line x1="23.95" y1="13.23" x2="37.52" y2="13.23"/>
+	<line x1="23.95" y1="21.74" x2="37.52" y2="21.74"/>
+	<line x1="23.95" y1="14.93" x2="30.03" y2="14.93"/>
+	<line x1="23.95" y1="23.44" x2="30.03" y2="23.44"/>
+	<line x1="23.95" y1="16.63" x2="34.56" y2="16.63"/>
+	<line x1="23.95" y1="26.84" x2="33.47" y2="26.84"/>
+	<line x1="41.78" y1="28.54" x2="29.85" y2="28.54"/>
+	<line x1="23.95" y1="18.33" x2="29.26" y2="18.33"/>
+	<line x1="23.95" y1="20.03" x2="30.63" y2="20.03"/>
+	<line x1="23.95" y1="25.14" x2="29.26" y2="25.14"/>
+	<line x1="31.6" y1="14.93" x2="38.54" y2="14.93"/>
+	<line x1="31.6" y1="23.44" x2="38.54" y2="23.44"/>
+	<line x1="36.02" y1="16.63" x2="39.51" y2="16.63"/>
+	<line x1="35.35" y1="26.84" x2="39.51" y2="26.84"/>
+	<line x1="28.3" y1="28.54" x2="26.21" y2="28.54"/>
+	<line x1="32.13" y1="18.33" x2="39.51" y2="18.33"/>
+	<line x1="32.13" y1="20.03" x2="37.15" y2="20.03"/>
+	<line x1="32.13" y1="25.14" x2="39.51" y2="25.14"/>
+	<line x1="39.2" y1="13.23" x2="41.78" y2="13.23"/>
+	<line x1="39.2" y1="21.74" x2="41.78" y2="21.74"/>
+	<line x1="40.3" y1="14.93" x2="41.78" y2="14.93"/>
+	<line x1="40.3" y1="23.44" x2="41.78" y2="23.44"/>
+	<line x1="40.75" y1="16.63" x2="41.78" y2="16.63"/>
+	<line x1="40.75" y1="26.84" x2="41.78" y2="26.84"/>
+	<line x1="24.98" y1="28.54" x2="23.95" y2="28.54"/>
+	<line x1="40.75" y1="18.33" x2="41.78" y2="18.33"/>
+	<line x1="38.8" y1="20.03" x2="41.78" y2="20.03"/>
+	<line x1="40.75" y1="25.14" x2="41.78" y2="25.14"/>
+	<path d="M48.15,13.23h19.14c0.35,0,0.63,0.3,0.63,0.63v14.09c0,0.34-0.3,0.63-0.63,0.63H48.15
+		c-0.34,0-0.63-0.28-0.63-0.63V13.87C47.51,13.52,47.8,13.23,48.15,13.23z"/>
+	<path d="M76.94,39.78h11.78c1.57,0,1.31-0.8,0.5-1.66c-2.01-2.12-4.4-2.53-6.89-2.1c-2.65,0.45-3.89,0.99-5.55,2.51
+		C76.17,39.08,75.82,39.78,76.94,39.78z"/>
+	<path d="M89.86,39.26c0.53-5.23-5.23-5.83-8.98-4.74c-2.54,0.74-4.27,1.69-4.64,5.01"/>
+	<path d="M77.09,36.85c0.06-0.54-0.01-0.74,0.25-1.27c0.5-1.02,1.63-1.53,2.84-1.16c0.11,0.03,0.38,0.12,0.49,0.17"/>
+	<path d="M15.34,25.25H4.06v12.21c0,1.36,1.11,2.47,2.47,2.47h6.34c1.36,0,2.47-1.11,2.47-2.47V25.25z"/>
+	<line x1="15.34" y1="31.36" x2="4.06" y2="31.36"/>
+	<path d="M4.06,28.37H1.97C1.44,28.37,1,28.81,1,29.35v5.17c0,0.54,0.44,0.97,0.97,0.97h2.08V28.37z"/>
+	<line x1="15.34" y1="33.6" x2="10.43" y2="33.6"/>
+	<line x1="15.34" y1="35.38" x2="12.88" y2="35.38"/>
+	<line x1="15.34" y1="37.24" x2="8.63" y2="37.24"/>
+</g>
+<g id="svg_coffe_mountain" class="svc_linija">
+	<g>
+		<polygon points="64.42,25.82 51.01,25.81 56.3,20.55 59.15,23.11 60.6,21.56 		"/>
+		<line x1="56.68" y1="25.87" x2="59.15" y2="23.11"/>
+	</g>
+</g>
+<g id="svg_coffe_sun" class="svc_linija">
+	<circle cx="63.05" cy="17.55" r="1.71"/>
+</g>
+<g id="svg_coffe_smoke" class="svc_linija">
+	<line id="scs1" x1="6.15" y1="23.08" x2="6.15" y2="12.73"/>
+	<line id="scs2" x1="8.42" y1="23.08" x2="8.42" y2="12.73"/>
+	<line id="scs3" x1="10.69" y1="23.08" x2="10.69" y2="12.73"/>
+	<line id="scs4" x1="12.95" y1="23.08" x2="12.95" y2="12.73"/>
+</g>
+</svg>

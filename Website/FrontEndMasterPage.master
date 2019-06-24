@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontEndMasterPage.master.cs" Inherits="FrontEndMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png?v=2">
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest?v=2">
+    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg?v=2" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        #initPreloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 100;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 100;
+            transform: translateX(100%);
+        }
+    </style>
+    <link href="assets/css/abovethefold.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header class="top-header clearfix">
+                <a class="main-logo" href="/">
+                    <img title="3dr model logo" src="assets/img/3drmodel-logo.png" />
+                </a>
+                <a href="#" data-target="body" class="toggle-menu" data-target="body">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </header>
+            <nav class="main-menu_block">
+                <a href="#" data-target="body" class="close-menu toggle-target fn">&#xe800;</a>
+                <ul class="menu main-menu">
+                    <li><a data-url="/Default.aspx" data-menu="default" class="js-menu menu-item active">Homepage</a></li>
+                    <li><a data-url="/About.aspx" data-menu="about" class="js-menu menu-item">About Us</a></li>
+                    <li><a data-url="/Projects.aspx" data-menu="projects" class="js-menu menu-item">Projects</a></li>
+                    <li><a data-url="/clientlist.aspx" data-menu="clientlist" class="js-menu menu-item">Client List</a></li>
+                    <li><a data-url="/Videos.aspx" data-menu="videos" class="js-menu menu-item">Videos</a></li>
+                    <li><a data-url="/News.aspx" data-menu="news" class="js-menu menu-item">News</a></li>
+                    <li><a data-url="/Contact.aspx" data-menu="contact" class="js-menu menu-item">Contact</a></li>
+
+                </ul>
+                <ul class="menu social-menu social-menu-nav clearfix">
+                    <li><a class="fn icon-facebook" href="https://www.facebook.com/3drmodels/"></a></li>
+                    <li><a class="fn icon-twitter" href="https://twitter.com/3drModel"></a></li>
+                    <li><a class="fn icon-instagram" href="https://www.instagram.com/3drmodels/"></a></li>
+                </ul>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                <div class="footer-ctx container">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-3 links">
+                            <h3>Links</h3>
+                            <ul>
+                                <li><a href="/About.aspx">About</a></li>
+                                <li><a href="/Projects">Projects</a></li>
+                                <li><a href="/News.aspx">News</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 links">
+                            <h3>SUPPORT</h3>
+                            <ul>
+                                <li><a href="/Contact.aspx">Contact us</a></li>
+                                <li><a>Customer Service</a></li>
+                                <li><a>Sales Team</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 newsletter">
+                            <h3>NEWSLETTER</h3>
+                            <div class="input-div">
+                                <input type="email" placeholder="Email">
+                                <a class="btn-newsletter"></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 social">
+                            <div class="social-align">
+                                <h3>FOLOW US</h3>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/pg/3drmodels/about/" class="fn icon-facebook"></a></li>
+                                    <li><a href="https://twitter.com/3drModel" class="fn icon-twitter"></a></li>
+                                    <li><a href="https://www.youtube.com/user/3drModels" class="fn icon-youtube-play"></a></li>
+                                    <li><a href="https://plus.google.com/+3drmodels/posts" class="fn icon-gplus"></a></li>
+                                    <li><a href="http://instagram.com/3drmodels" class="fn icon-instagram"></a></li>
+                                    <li><a href="http://www.linkedin.com/groups/3dr-Models-4934754" class="fn icon-linkedin"></a></li>
+                                    <li><a href="https://www.pinterest.com/3drmodels/" class="fn icon-pinterest"></a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom container">
+                    <ul class="ft-bottom">
+                        <li><a href="#">Staff Login</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Client Monitor Cam</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                    <div class="copy-right-statment">
+                        Copyrights ©<span class="js-copyrights">2018</span>
+                        <br />
+                        <span class="site-name">3dr Models, All Rights Reserved</span>
+                    </div>
+                    <a class="btn-footer-link"></a>
+                </div>
+            </footer>
+            <div class="menu-cover" data-target="body"></div>
+            <span id="js-2top" title="scroll to top" xmlns="http://www.w3.org/1999/xhtml" style="display: none;"></span>
+            <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #010002;
+                            }
+                        </style>
+                    </defs>
+                    <symbol id="icon-decor-part1" viewBox="0 0 504.2 492.2">
+                        <path stroke-miterlimit="10" d="M252.1.6L471 123.3v245.5L252.1 491.6 33.2 368.8V123.3L252.1.6z" />
+                    </symbol>
+                </svg>
+            </div>
+        </div>
+
+        <div id="initPreloader" style="background-color: white">
+        </div>
+        <div id="preloader"></div>
+    </form>
+    <link href="/assets/css/animate.css" rel="stylesheet" />
+    <link href="/assets/css/common.css?v=<%= ConfigurationManager.AppSettings["CSSVersion"] %>" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderCss" runat="server">
+        <%--all page css should go inside this place holder , INLINE CSS IS NOT ALLOWED--%>
+    </asp:ContentPlaceHolder>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+
+    <script src="/assets/js/fit.min.js"></script>
+    <script src="/assets/js/common.js?v=<%= ConfigurationManager.AppSettings["JSVersion"] %>"></script>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderScripts" runat="server">
+        <%--all page script should go inside this place holder , INLINE javacripts IS NOT ALLOWED--%>
+    </asp:ContentPlaceHolder>
+</body>
+</html>

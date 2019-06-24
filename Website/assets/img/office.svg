@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 95 45" style="enable-background:new 0 0 95 45;" xml:space="preserve">
+<style type="text/css">
+		.svo_linija{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#1A1A18;stroke-width:0.5669;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256;}
+		.st1{stroke:#1A1A18}
+		.st2{stroke:#006838;}
+</style>
+    <script xlink:href="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js" />
+    <script>
+        var d=document;
+        var s1;
+        var s2;
+        var s3;
+        var s4;
+        var s5;
+        var s6;
+        var s7;
+        var s8;
+        var scs_anim = new TimelineMax({repeat:-1});
+        scs_anim.pause();
+
+        window.onload = function(){
+            s1 = d.getElementById("s1");
+            s2 = d.getElementById("s2");
+            s3 = d.getElementById("s3");
+            s4 = d.getElementById("s4");
+            s5 = d.getElementById("s5");
+            s6 = d.getElementById("s6");
+            s7 = d.getElementById("s7");
+            s8 = d.getElementById("s8");
+
+            s1.style.strokeDasharray = "2 2 1.5 1.5";
+            s2.style.strokeDasharray = "3 1.5 1 1.5";
+            s3.style.strokeDasharray = "1 2 1.5 2.5";
+            s4.style.strokeDasharray = "0.5 1.5 3 2";
+            s5.style.strokeDasharray = "2 1.5 2 1.5";
+            s6.style.strokeDasharray = "1.5 1 2 2.5";
+            s7.style.strokeDasharray = "2 1.5 3 0.5";
+            s8.style.strokeDasharray = "1.5 3 2.5 0";
+            s1.style.strokeDashoffset = 7;
+            s2.style.strokeDashoffset = 7;
+            s3.style.strokeDashoffset = 7;
+            s4.style.strokeDashoffset = 7;
+            s5.style.strokeDashoffset = 7;
+            s6.style.strokeDashoffset = 7;
+            s7.style.strokeDashoffset = 7;
+            s8.style.strokeDashoffset = 7;
+
+            scs_anim
+            .to(s1, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+            .to(s2, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+            .to(s3, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+            .to(s4, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+            .to(s5, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+            .to(s6, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+            .to(s7, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+            .to(s8, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0);
+
+        }
+
+
+        d.Play = function(){
+            TweenMax.to("#svg_office_trees", 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#svg_office_sun", 0.5, {css:{stroke:"#1f1f1f"}});
+            scs_anim.play();
+        }
+
+        d.Stop = function(){
+            TweenMax.to("#svg_office_trees", 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#svg_office_sun", 0.5, {css:{stroke:"#1A1A18"}});
+            scs_anim.pause();
+        }
+        d.Line = function(d){
+            var x = document.getElementsByClassName("svo_linija");
+            var i;
+            for (i = 0; x.length > i; i++) {
+                x[i].style.strokeWidth = d;
+            }
+        }
+    </script>
+<g id="svg_office_house" class="svo_linija">
+	<rect x="26.21" y="13.28" width="28.84" height="14.27"/>
+	<polyline points="55.05,27.55 25.45,27.55 25.45,30.27 55.05,30.27 57.42,30.27 57.42,27.55 57.42,13.28 57.42,10.56 
+		55.05,10.56 25.45,10.56 25.45,13.28 55.05,13.28 	"/>
+	<line x1="35.86" y1="13.28" x2="35.86" y2="27.55"/>
+	<rect x="29.14" y="30.29" width="24.01" height="14.12"/>
+	<rect x="32.2" y="32.4" width="18.49" height="12.01"/>
+	<line x1="29.2" y1="42.19" x2="32.2" y2="42.19"/>
+	<line x1="50.76" y1="42.14" x2="53.15" y2="42.14"/>
+	<line x1="35.14" y1="38.88" x2="47.75" y2="38.88"/>
+	<line x1="35.18" y1="40.71" x2="47.71" y2="40.71"/>
+	<line x1="40.38" y1="42.67" x2="42.51" y2="42.67"/>
+	<g>
+		<path d="M35.85,35.51h1.83c0.29,0,0.52,0.23,0.52,0.52v0.54c0,0.29-0.24,0.52-0.52,0.52h-1.83
+			c-0.29,0-0.52-0.23-0.52-0.52v-0.54C35.33,35.74,35.56,35.51,35.85,35.51z"/>
+		<path d="M40.53,35.51h1.83c0.29,0,0.52,0.23,0.52,0.52v0.54c0,0.29-0.23,0.52-0.52,0.52h-1.83
+			c-0.29,0-0.52-0.23-0.52-0.52v-0.54C40.01,35.74,40.25,35.51,40.53,35.51z"/>
+		<path d="M45.22,35.51h1.83c0.29,0,0.52,0.23,0.52,0.52v0.54c0,0.29-0.23,0.52-0.52,0.52h-1.83
+			c-0.29,0-0.52-0.23-0.52-0.52v-0.54C44.7,35.74,44.93,35.51,45.22,35.51z"/>
+	</g>
+	<polyline points="53.15,10.49 53.15,8.47 62.46,8.47 62.46,44.41 53.15,44.41 53.15,30.29 	"/>
+	<rect x="53.15" y="5.73" width="9.31" height="2.74"/>
+	<rect x="69.72" y="32.62" width="7.87" height="11.75"/>
+	<rect x="72.33" y="34.84" width="2.65" height="7.35"/>
+	<path d="M62.46,42.01h7.21 M77.64,42.01h6.92"/>
+	<line x1="84.65" y1="44.36" x2="84.65" y2="28.79"/>
+	<polyline points="62.46,17.04 85.56,26.96 85.56,29.18 62.46,19.26 	"/>
+	<line x1="1" y1="44.41" x2="90.1" y2="44.41"/>
+	<line x1="71.01" y1="39.26" x2="71.01" y2="37.88"/>
+	<line x1="84.59" y1="31.34" x2="62.44" y2="21.83"/>
+	<line x1="69.72" y1="32.62" x2="69.71" y2="24.95"/>
+	<line x1="69.63" y1="29.68" x2="62.46" y2="29.68"/>
+	<line x1="77.6" y1="32.62" x2="77.59" y2="28.33"/>
+	<line x1="77.6" y1="35.04" x2="84.65" y2="35.04"/>
+	<line x1="49.1" y1="13.48" x2="49.1" y2="27.55"/>
+	<line x1="51.08" y1="13.48" x2="51.08" y2="27.55"/>
+	<line x1="53.07" y1="13.48" x2="53.07" y2="27.55"/>
+	<line x1="64.44" y1="22.69" x2="64.44" y2="41.94"/>
+	<line x1="66.43" y1="23.53" x2="66.43" y2="41.95"/>
+	<line x1="18.21" y1="36.69" x2="18.22" y2="41.1"/>
+	<line x1="8.74" y1="37.6" x2="8.74" y2="41.28"/>
+	<path d="M10.69,44.41c0-0.04,0-0.08,0-0.13c0-2.43,1.97-4.4,4.4-4.4c2.43,0,4.4,1.97,4.4,4.4c0,0.04,0,0.09,0,0.13
+		H10.69z"/>
+	<path d="M18.75,41.82c0.22-0.04,0.44-0.07,0.67-0.07c1.6,0,2.94,1.14,3.25,2.65"/>
+	<path d="M3.34,44.41c0-0.03,0-0.07,0-0.1c0-1.92,1.56-3.48,3.48-3.48c1.92,0,3.48,1.56,3.48,3.48c0,0.03,0,0.07,0,0.1
+		H3.34z"/>
+	<line x1="13.45" y1="35.28" x2="13.45" y2="40.1"/>
+	<line x1="59.08" y1="32.77" x2="62.31" y2="32.77"/>
+	<line x1="59.08" y1="34.47" x2="62.31" y2="34.47"/>
+	<line x1="59.08" y1="36.17" x2="62.31" y2="36.17"/>
+	<line x1="59.08" y1="37.87" x2="62.31" y2="37.87"/>
+	<line x1="59.08" y1="39.57" x2="62.31" y2="39.57"/>
+	<line x1="59.08" y1="41.28" x2="62.31" y2="41.28"/>
+	<line x1="59.08" y1="42.98" x2="62.31" y2="42.98"/>
+</g>
+<g id="svg_office_trees" class="svo_linija">
+	<path d="M18.21,36.69c-1.8,0-3.27-1.39-3.4-3.16h0c-0.29-4.09,0.55-9.94,2.71-13.33l0.01-0.02l0,0l0.01-0.01l0-0.01
+		c0.34-0.53,1.1-0.46,1.42,0.01l0.01,0.01l0,0l0.01,0.02c2.16,3.39,3,9.25,2.71,13.33h0c-0.13,1.77-1.6,3.16-3.4,3.16l-0.04,0
+		L18.21,36.69z"/>
+	<path d="M8.74,37.6c-1.59,0-2.88-1.23-3-2.79h0c-0.26-3.61,0.49-8.77,2.39-11.76l0.01-0.01l0,0l0.01-0.01l0-0.01
+		c0.3-0.46,0.97-0.41,1.25,0.01l0.01,0.01l0,0l0.01,0.01c1.9,2.99,2.65,8.15,2.39,11.76l0,0c-0.11,1.56-1.41,2.79-3,2.79l-0.04,0
+		L8.74,37.6z"/>
+	<path d="M9.81,23.5c0.53-3.03,1.45-5.97,2.81-8.11l0.01-0.02l0,0l0.01-0.01l0.01-0.01c0.41-0.64,1.33-0.56,1.71,0.01
+		l0.01,0.01l0,0l0.01,0.02c1.04,1.64,1.83,3.75,2.38,6.01 M15.21,34.93c-0.5,0.22-1.06,0.35-1.65,0.34l-0.05,0l-0.05,0
+		c-0.56,0-1.09-0.11-1.57-0.31"/>
+	<line x1="17.92" y1="33.57" x2="21.7" y2="33.57"/>
+	<line x1="19.62" y1="31.86" x2="21.42" y2="31.86"/>
+	<line x1="19.05" y1="35.27" x2="20.86" y2="35.27"/>
+	<line x1="21.04" y1="33.57" x2="21.7" y2="33.57"/>
+	<line x1="7.97" y1="34.3" x2="11.84" y2="34.3"/>
+	<line x1="9.7" y1="32.47" x2="11.55" y2="32.47"/>
+	<line x1="9.42" y1="36.13" x2="11.27" y2="36.13"/>
+	<line x1="11.16" y1="34.3" x2="11.84" y2="34.3"/>
+	<line x1="14.33" y1="23.59" x2="15.88" y2="23.59"/>
+	<line x1="13.41" y1="21.76" x2="16.64" y2="21.76"/>
+	<line x1="13.41" y1="25.42" x2="15.25" y2="25.42"/>
+</g>
+<g id="svg_office_sun" class="svo_linija">
+	<line id="s1" x1="82.7" y1="8.68" x2="82.7" y2="1.18"/>
+	<line id="s2" x1="82.7" y1="16.02" x2="82.7" y2="23.52"/>
+	<line id="s3" x1="79.03" y1="12.35" x2="71.53" y2="12.35"/>
+	<line id="s4" x1="86.37" y1="12.35" x2="93.87" y2="12.35"/>
+	<line id="s5" x1="80.1" y1="9.75" x2="74.8" y2="4.45"/>
+	<line id="s6" x1="85.3" y1="14.95" x2="90.6" y2="20.25"/>
+	<line id="s7" x1="80.1" y1="14.95" x2="74.8" y2="20.25"/>
+	<line id="s8" x1="85.3" y1="9.75" x2="90.6" y2="4.45"/>
+	<circle id="sr" cx="82.7" cy="12.35" r="3.67"/>
+</g>
+</svg>

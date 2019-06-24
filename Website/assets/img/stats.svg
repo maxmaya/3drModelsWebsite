@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 91 40" style="enable-background:new 0 0 91 40;" xml:space="preserve">
+<style type="text/css">
+	.mainLine{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#1A1A18;stroke-width:0.5669;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256;}
+	.filled{fill:#fff;}
+    #Bars {
+        clip-path: url(#bMask);
+    }
+</style>
+    <script xlink:href="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js" />
+    <script>
+        var d=document;
+        var w=window;
+        var s1;
+        var s2;
+        var s3;
+        var s4;
+        var s5;
+        var s6;
+        var s7;
+        var s8;
+        
+        var t1;
+        var t2;
+        var t3;
+        
+        var c_anim = new TimelineMax({repeat:-1, repeatDelay:2});
+        c_anim.pause();
+        var t_anim = new TimelineMax({repeat:-1});
+        t_anim.pause();
+        var b_anim = new TimelineMax({repeat:-1});
+        b_anim.pause();
+
+        w.onload = function(){
+        
+        c1 = d.getElementById("c1");
+        c2 = d.getElementById("c2");
+        c3 = d.getElementById("c3");
+        c4 = d.getElementById("c4");
+        
+        c1.style.strokeDasharray = "5 5";
+        c2.style.strokeDasharray = "5 5";
+        c3.style.strokeDasharray = "5 5";
+        c4.style.strokeDasharray = "5 5";
+        
+        c1.style.strokeDashoffset = 10;
+        c2.style.strokeDashoffset = 10;
+        c3.style.strokeDashoffset = 10;
+        c4.style.strokeDashoffset = 10;
+        
+        c_anim
+        .to(c1, 0.1, {css:{strokeDashoffset:5, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(c2, 0.1, {css:{strokeDashoffset:5, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0.02)
+        .to(c3, 0.1, {css:{strokeDashoffset:5, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0.04)
+        .to(c4, 0.1, {css:{strokeDashoffset:5, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0.06)
+        .to(c1, 0.4, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone})
+        .to(c2, 0.4, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone})
+        .to(c3, 0.4, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone})
+        .to(c4, 0.4, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone});
+        
+        
+        t1 = d.getElementById("t1");
+        t2 = d.getElementById("t2");
+        t3 = d.getElementById("t3");
+        
+        t1.style.strokeDasharray = "12.4 12.4";
+        t2.style.strokeDasharray = "12.4 12.4";
+        t3.style.strokeDasharray = "12.4 12.4";
+        
+        t1.style.strokeDashoffset = 4;
+        t2.style.strokeDashoffset = 7;
+        t3.style.strokeDashoffset = 10;
+        
+        t_anim
+        .to(t1, 0.5, {css:{strokeDashoffset:10, strokeMiterlimit:"+=0.0001"},ease: Sine.easeOut},0)
+        .to(t2, 0.5, {css:{strokeDashoffset:4, strokeMiterlimit:"+=0.0001"}, ease: Sine.easeOut},0)
+        .to(t3, 0.5, {css:{strokeDashoffset:7, strokeMiterlimit:"+=0.0001"}, ease: Sine.easeOut},0)
+        .to(t1, 0.5, {css:{strokeDashoffset:7, strokeMiterlimit:"+=0.0001"}, ease: Sine.easeOut},0.5)
+        .to(t2, 0.5, {css:{strokeDashoffset:10, strokeMiterlimit:"+=0.0001"},ease: Sine.easeOut},0.5)
+        .to(t3, 0.5, {css:{strokeDashoffset:4, strokeMiterlimit:"+=0.0001"}, ease: Sine.easeOut},0.5)
+        .to(t1, 0.5, {css:{strokeDashoffset:4, strokeMiterlimit:"+=0.0001"}, ease: Sine.easeOut},1)
+        .to(t2, 0.5, {css:{strokeDashoffset:7, strokeMiterlimit:"+=0.0001"}, ease: Sine.easeOut},1)
+        .to(t3, 0.5, {css:{strokeDashoffset:10, strokeMiterlimit:"+=0.0001"},ease: Sine.easeOut},1)
+        
+        b1 = d.getElementById("b1");
+        b2 = d.getElementById("b2");
+        b3 = d.getElementById("b3");
+        
+        TweenMax.set(b1, {y:5, rotation:0.01});
+        TweenMax.set(b2, {y:2.5, rotation:0.01});
+        TweenMax.set(b3, {y:0, rotation:0.01});
+        
+        b_anim
+        .to(b1, 1, {y:2.5, ease: Power1.easeInOut})
+        .to(b2, 1, {y:0  , ease: Power1.easeInOut},"-=0.9")
+        .to(b3, 1, {y:5  , ease: Power1.easeInOut},"-=0.9")
+        .to(b1, 1, {y:0  , ease: Power1.easeInOut})
+        .to(b2, 1, {y:5  , ease: Power1.easeInOut},"-=0.9")
+        .to(b3, 1, {y:2.5, ease: Power1.easeInOut},"-=0.9")
+        .to(b1, 1, {y:5  , ease: Power1.easeInOut})
+        .to(b2, 1, {y:2.5, ease: Power1.easeInOut},"-=0.9")
+        .to(b3, 1, {y:0  , ease: Power1.easeInOut},"-=0.9");
+        
+        }
+
+
+        d.Play = function(){
+            //TweenMax.to("#LapasRatas", 0.5, {css:{stroke:"#1C75BC"}});
+            //TweenMax.to("#Textas"    , 0.5, {css:{stroke:"#27AAE1"}});
+            //TweenMax.to("#Checkai"   , 0.5, {css:{stroke:"#009444"}});
+            //TweenMax.to("#TTextas"   , 0.5, {css:{stroke:"#27AAE1"}});
+            //TweenMax.to("#Telefonas" , 0.5, {css:{stroke:"#BE1E2D"}});
+            //TweenMax.to("#gLinijosB" , 0.5, {css:{stroke:"#27AAE1"}});
+            //TweenMax.to("#gLinijosG" , 0.5, {css:{stroke:"#009444"}});
+            //TweenMax.to("#gDots"     , 0.5, {css:{stroke:"#006838"}});
+            TweenMax.to("#b1"        , 0.5, {css:{stroke:"#1f1f1f"}});
+            TweenMax.to("#b2"        , 0.5, {css:{stroke:"#1f1f1f"}});
+            TweenMax.to("#b3"        , 0.5, {css:{stroke:"#1f1f1f"}});
+            //TweenMax.to("#Pen"       , 0.5, {css:{stroke:"#BE1E2D"}});
+            //c_anim.play();
+            //t_anim.play();
+            b_anim.play();
+        }
+
+        d.Stop = function(){
+            TweenMax.to("#LapasRatas", 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#Textas"    , 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#Checkai"   , 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#TTextas"   , 0.5, {css:{stroke:"#1A1A18"}});
+            //TweenMax.to("#Telefonas" , 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#gLinijosB" , 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#gLinijosG" , 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#gDots"     , 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#b1"        , 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#b2"        , 0.5, {css:{stroke:"#1A1A18"}});
+            TweenMax.to("#b3"        , 0.5, {css:{stroke:"#1A1A18"}});
+            //TweenMax.to("#Pen"       , 0.5, {css:{stroke:"#1A1A18"}});
+            c_anim.pause();
+            c_anim.seek(0);
+        
+            t_anim.pause();
+            b_anim.pause();
+        }
+        d.Line = function(d){
+            var x = document.getElementsByClassName("mainLine");
+            var i;
+            for (i = 0; x.length > i; i++) {
+                x[i].style.strokeWidth = d;
+            }
+        }
+    </script>
+    <defs>
+        <clipPath id="bMask" class="filled">
+            <path d="M54.81,21.4H35.15V6.13h19.66V21.4z"/>
+        </clipPath>
+    </defs>
+<g id="MainLayer" class="mainLine">
+	<rect x="31.94" y="4.34" width="40.84" height="35"/>
+	<path d="M44.5,1h15.71c0.92,0,1.67,0.75,1.67,1.67v1.67H42.83V2.67C42.83,1.75,43.58,1,44.5,1z"/>
+	<line x1="77.14" y1="20.83" x2="89.54" y2="20.83"/>
+	<line x1="77.14" y1="35.61" x2="89.54" y2="35.61"/>
+	<line x1="81.75" y1="19.05" x2="84.93" y2="19.05"/>
+	<circle cx="83.34" cy="37.49" r="0.68"/>
+	<polygon points="3.87,36.97 1,36.97 2.43,39.35 	"/>
+	<line x1="1" y1="16.69" x2="3.87" y2="16.69"/>
+	<line x1="1" y1="30.01" x2="3.87" y2="30.01"/>
+	<line x1="1" y1="31.14" x2="3.87" y2="31.14"/>
+	<line x1="1" y1="32.28" x2="3.87" y2="32.28"/>
+	<line x1="1" y1="33.41" x2="3.87" y2="33.41"/>
+	<line x1="1" y1="34.55" x2="3.87" y2="34.55"/>
+	<line x1="1" y1="35.68" x2="3.87" y2="35.68"/>
+	<path class="filled" d="M49.82,3.1h5.06c0.25,0,0.45,0.2,0.45,0.45v1.58c0,0.25-0.2,0.45-0.45,0.45h-5.06c-0.25,0-0.45-0.2-0.45-0.45
+		V3.55C49.37,3.3,49.57,3.1,49.82,3.1z"/>
+</g>
+<g id="LapasRatas" class="mainLine">
+	<polygon points="7.9,11.15 23.75,11.15 27.63,14.9 27.63,39.34 7.9,39.34 	"/>
+	<polygon points="23.71,14.97 23.72,11.15 27.63,14.97 	"/>
+	<path d="M63.32,19.86c3.23,0,5.86-2.63,5.86-5.86s-2.63-5.86-5.86-5.86c-3.23,0-5.86,2.63-5.86,5.86
+		S60.09,19.86,63.32,19.86z"/>
+	<polyline points="63.32,8.13 63.32,13.99 68.35,17 	"/>
+	<line x1="64.67" y1="14.8" x2="64.67" y2="10.44"/>
+	<line x1="66.16" y1="15.31" x2="66.16" y2="10.95"/>
+	<line x1="67.48" y1="16.04" x2="67.48" y2="11.68"/>
+</g>
+<g id="Textas" class="mainLine">
+	<line x1="10.16" y1="14.99" x2="21.83" y2="14.99"/>
+	<line x1="15.22" y1="18.77" x2="22.59" y2="18.77"/>
+	<line x1="15.22" y1="23.54" x2="22.59" y2="23.54"/>
+	<line x1="15.22" y1="28.54" x2="22.59" y2="28.54"/>
+	<line x1="15.22" y1="33.54" x2="22.59" y2="33.54"/>
+	<line x1="15.22" y1="20.13" x2="18.52" y2="20.13"/>
+	<line x1="15.22" y1="24.9" x2="18.52" y2="24.9"/>
+	<line x1="15.22" y1="29.9" x2="18.52" y2="29.9"/>
+	<line x1="15.22" y1="34.9" x2="18.52" y2="34.9"/>
+	<line x1="15.22" y1="21.5" x2="20.98" y2="21.5"/>
+	<line x1="15.22" y1="26.27" x2="20.98" y2="26.27"/>
+	<line x1="15.22" y1="31.27" x2="20.98" y2="31.27"/>
+	<line x1="15.22" y1="36.27" x2="20.98" y2="36.27"/>
+	<line x1="19.38" y1="20.13" x2="23.14" y2="20.13"/>
+	<line x1="19.38" y1="24.9" x2="23.14" y2="24.9"/>
+	<line x1="19.38" y1="29.9" x2="23.14" y2="29.9"/>
+	<line x1="19.38" y1="34.9" x2="23.14" y2="34.9"/>
+	<line x1="21.78" y1="21.5" x2="23.67" y2="21.5"/>
+	<line x1="21.78" y1="26.27" x2="23.67" y2="26.27"/>
+	<line x1="21.78" y1="31.27" x2="23.67" y2="31.27"/>
+	<line x1="21.78" y1="36.27" x2="23.67" y2="36.27"/>
+	<line x1="23.5" y1="18.77" x2="24.9" y2="18.77"/>
+	<line x1="23.5" y1="23.54" x2="24.9" y2="23.54"/>
+	<line x1="23.5" y1="28.54" x2="24.9" y2="28.54"/>
+	<line x1="23.5" y1="33.54" x2="24.9" y2="33.54"/>
+	<line x1="24.1" y1="20.13" x2="24.9" y2="20.13"/>
+	<line x1="24.1" y1="24.9" x2="24.9" y2="24.9"/>
+	<line x1="24.1" y1="29.9" x2="24.9" y2="29.9"/>
+	<line x1="24.1" y1="34.9" x2="24.9" y2="34.9"/>
+	<line x1="24.34" y1="21.5" x2="24.9" y2="21.5"/>
+	<line x1="24.34" y1="26.27" x2="24.9" y2="26.27"/>
+	<line x1="24.34" y1="31.27" x2="24.9" y2="31.27"/>
+	<line x1="24.34" y1="36.27" x2="24.9" y2="36.27"/>
+</g>
+<g id="Checkai" class="mainLine">
+	<polyline id="c1" points="10.53,19.41 11.97,20.95 13.55,18.81 	"/>
+	<polyline id="c2" points="10.53,24.09 11.97,25.62 13.55,23.48 	"/>
+	<polyline id="c3" points="10.53,29.21 11.97,30.75 13.55,28.61 	"/>
+	<polyline id="c4" points="10.53,34.12 11.97,35.65 13.55,33.51 	"/>
+</g>
+<g id="TTextas" class="mainLine">
+	<line id="t1" x1="77.14" y1="22.81" x2="89.54" y2="22.81"/>
+	<line id="t2" x1="77.14" y1="24.51" x2="89.54" y2="24.51"/>
+	<line id="t3" x1="77.14" y1="26.17" x2="89.54" y2="26.17"/>
+</g>
+<g id="Telefonas" class="mainLine">
+	<path d="M79.37,16.78h7.94c1.22,0,2.22,1,2.22,2.22v18.11c0,1.22-1,2.22-2.22,2.22h-7.94c-1.22,0-2.22-1-2.22-2.22
+		V19.01C77.14,17.78,78.14,16.78,79.37,16.78z"/>
+</g>
+<g id="gLinijosB" class="mainLine">
+	<line x1="38.65" y1="36.53" x2="38.65" y2="32.99"/>
+	<line x1="51.23" y1="36.53" x2="51.23" y2="30.35"/>
+	<line x1="63.41" y1="36.53" x2="63.41" y2="28.4"/>
+	<line x1="40.27" y1="36.53" x2="40.27" y2="31.35"/>
+	<line x1="52.86" y1="36.53" x2="52.86" y2="28.84"/>
+	<line x1="65.04" y1="36.53" x2="65.04" y2="26.68"/>
+	<line x1="41.89" y1="36.53" x2="41.89" y2="29.65"/>
+	<line x1="54.48" y1="36.53" x2="54.48" y2="27.58"/>
+	<line x1="66.66" y1="36.53" x2="66.66" y2="25.09"/>
+</g>
+<g id="gLinijosG" class="mainLine">
+	<line x1="36.18" y1="35.35" x2="43.41" y2="28.12"/>
+	<line x1="48.58" y1="32.98" x2="55.46" y2="26.17"/>
+	<line x1="60.63" y1="31.03" x2="67.85" y2="23.78"/>
+	<line x1="43.41" y1="28.12" x2="48.58" y2="32.98"/>
+	<line x1="55.46" y1="26.17" x2="60.63" y2="31.03"/>
+</g>
+<g id="gDots" class="mainLine filled">
+	<circle cx="36.18" cy="35.35" r="1.19"/>
+	<circle cx="43.41" cy="28.12" r="1.19"/>
+	<circle cx="48.58" cy="32.98" r="1.19"/>
+	<circle cx="55.46" cy="26.17" r="1.19"/>
+	<circle cx="60.63" cy="31.03" r="1.19"/>
+	<circle cx="67.85" cy="23.78" r="1.19"/>
+</g>
+<g id="Bars" class="mainLine">
+	<g id="b1">
+		<rect x="36.26" y="7.31" width="4.49" height="14.09"/>
+		<line x1="36.26" y1="9.14" x2="38.72" y2="9.14"/>
+		<line x1="36.26" y1="10.83" x2="38.72" y2="10.83"/>
+		<line x1="36.26" y1="12.5" x2="38.72" y2="12.5"/>
+	</g>
+	<g id="b2">
+		<rect x="42.67" y="7.31" width="4.49" height="14.09"/>
+		<line x1="42.67" y1="9.14" x2="45.14" y2="9.14"/>
+		<line x1="42.67" y1="10.83" x2="45.14" y2="10.83"/>
+		<line x1="42.67" y1="12.5" x2="45.14" y2="12.5"/>
+	</g>
+    <g id="b3">
+		<rect x="49.09" y="7.31" width="4.49" height="14.09"/>
+		<line x1="49.09" y1="9.14" x2="51.55" y2="9.14"/>
+		<line x1="49.09" y1="10.83" x2="51.55" y2="10.83"/>
+		<line x1="49.09" y1="12.5" x2="51.55" y2="12.5"/>
+	</g>
+</g>
+<g id="bLinija" class="mainLine">
+	<line x1="35.15" y1="21.4" x2="54.81" y2="21.4"/>
+</g>
+<g id="Pen" class="mainLine">
+	<rect x="1" y="14.5" width="2.87" height="22.48"/>
+</g>
+</svg>

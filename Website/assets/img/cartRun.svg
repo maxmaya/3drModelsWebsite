@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 90 41" style="enable-background:new 0 0 90 41;" xml:space="preserve">
+<style type="text/css">
+	.mainLine{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#1A1A18;stroke-width:0.5669;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256;}
+	.st0{stroke:#BE1E2D;}
+	.st1{stroke:#006838;}
+	.st3{stroke:#27AAE1;}
+	.st4{stroke:#A7A9AC;}
+</style>
+<script xlink:href="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js" />
+<script>
+    var d=document;
+    var s1;
+    var s2;
+    var s3;
+    var s4;
+    var s5;
+    var s6;
+    var s7;
+    var s8;
+    
+    var cart;
+    
+    var c_anim = new TimelineMax({repeat:-1});
+    c_anim.pause();
+    var t_anim = new TimelineMax({repeat:-1});
+    t_anim.pause();
+
+    window.onload = function(){
+        s1 = d.getElementById("s1");
+        s2 = d.getElementById("s2");
+        s3 = d.getElementById("s3");
+        s4 = d.getElementById("s4");
+        s5 = d.getElementById("s5");
+        s6 = d.getElementById("s6");
+
+        s1.style.strokeDasharray = "11.9 2 8.1 0";
+        s2.style.strokeDasharray = "8.5 2 6.5 5";
+        s3.style.strokeDasharray = "12.3 2 5 2.7";
+        s4.style.strokeDasharray = "3.4 1.85 6.4 1.85 8.5 0";
+        s5.style.strokeDasharray = "6.4 2 4.4 1.2 5 3";
+        s6.style.strokeDasharray = "3 19";
+        s1.style.strokeDashoffset = 22;
+        s2.style.strokeDashoffset = 22;
+        s3.style.strokeDashoffset = 22;
+        s4.style.strokeDashoffset = 22;
+        s5.style.strokeDashoffset = 22;
+        s6.style.strokeDashoffset = 22;
+
+        c_anim
+        .to(s1, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(s2, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(s3, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(s4, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(s5, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0)
+        .to(s6, 1.5, {css:{strokeDashoffset:0, strokeMiterlimit:"+=0.0001"},ease: Power0.easeNone},0);
+
+        cart = d.getElementById("Cart");
+
+        TweenMax.set(cart, {rotation:0.01,transformOrigin:"50% 50%"});
+
+        t_anim
+        .to(cart, 0.5, {y:0.5,ease:  Power1.easeOut})
+        .to(cart, 0.5, {y:0,ease:  Power1.easeIn});
+    }
+
+
+    d.Play = function(){
+        //TweenMax.to("#box2", 0.5, {css:{stroke:"#F7941E"}});
+        //TweenMax.to("#box1", 0.5, {css:{stroke:"#F7941E"}});
+        //TweenMax.to("#Arrow", 0.5, {css:{stroke:"#27AAE1"}});
+        TweenMax.to("#Speed", 0.5, {css:{stroke:"#1f1f1f"}});
+        c_anim.play();
+        //t_anim.play();
+    }
+
+    d.Stop = function(){
+        //TweenMax.to("#box2", 0.5, { css:{stroke:"#1A1A18"}});
+        //TweenMax.to("#box1", 0.5, { css:{stroke:"#1A1A18"}});
+        //TweenMax.to("#Arrow", 0.5, {css:{stroke:"#1A1A18"}});
+        TweenMax.to("#Speed", 0.5, {css:{stroke:"#1A1A18"}});
+        c_anim.pause();
+        t_anim.pause();
+    }
+    d.Line = function(d){
+        var x = document.getElementsByClassName("mainLine");
+        var i;
+        for (i = 0; x.length > i; i++) {
+            x[i].style.strokeWidth = d;
+        }
+    }
+</script>
+<g id="Cart" class="mainLine">
+	<g id="box2">
+		<rect x="46.63" y="1" width="3.01" height="2.95"/>
+		<polyline points="42.51,5.65 42.51,1 53.63,1 53.63,10.4 49.64,10.4"/>
+	</g>
+	<rect id="box1" x="33.67" y="5.67" width="15.97" height="4.73"/>
+	<g id="Trolley">
+		<line x1="30.77" y1="12.64" x2="59.97" y2="12.64"/>
+		<line x1="34.67" y1="14.91" x2="58.83" y2="14.9"/>
+		<line x1="37.11" y1="17.18" x2="58.13" y2="17.17"/>
+		<line x1="34.9" y1="19.45" x2="57.22" y2="19.44"/>
+		<line x1="39.7" y1="22" x2="56.19" y2="21.99"/>
+		<polyline points="28.39,10.4 60.87,10.4 54.12,27.12 27.95,27.12"/>
+		<line x1="55.11" y1="24.66" x2="27.95" y2="24.65"/>
+		<line x1="34.79" y1="37.43" x2="47.84" y2="37.43"/>
+		<line x1="47.88" y1="34.93" x2="34.64" y2="34.95"/>
+		<path d="M27.95,37.43c-3.53,0-6.39-2.86-6.39-6.39c0-3.53,2.86-6.39,6.39-6.39 M27.95,27.12
+			c-2.16,0-3.92,1.75-3.92,3.92c0,2.16,1.75,3.92,3.92,3.92"/>
+		<polyline points="26.28,24.81 26.28,5.54 28.23,5.54 28.23,3.75 28.23,24.65"/>
+		<line x1="28.04" y1="3.75" x2="21.43" y2="3.75"/>
+		<polyline points="28.23,5.54 21.63,5.54 21.43,3.75"/>
+		<circle cx="31.33" cy="36.29" r="3.57"/>
+		<circle cx="51.16" cy="36.29" r="3.57"/>
+		<circle cx="31.33" cy="36.29" r="1.38"/>
+		<circle cx="51.16" cy="36.29" r="1.38"/>
+	</g>
+</g>
+<g id="Arrow" class="mainLine">
+	<g id="Star">
+		<line x1="72.17" y1="21.47" x2="68.1" y2="22.84"/>
+		<line x1="67.87" y1="30.83" x2="66.5" y2="26.76"/>
+		<line x1="63.36" y1="24.41" x2="59.29" y2="25.77"/>
+		<line x1="64.84" y1="21.8" x2="63.48" y2="17.74"/>
+		<line x1="63.61" y1="22.91" x2="61.04" y2="21.68"/>
+		<line x1="68.23" y1="19.43" x2="66.73" y2="21.86"/>
+		<line x1="64.52" y1="26.04" x2="63.02" y2="28.46"/>
+	</g>
+	<g id="Mouse">
+		<polygon points="81.27,31.77 81.2,38.73 65.57,24.11 86.98,24.09 82.25,29.14 88.98,31.43 88.04,34.26"/>
+		<line x1="70.68" y1="25.54" x2="85.62" y2="25.54"/>
+		<line x1="74.57" y1="26.97" x2="84.28" y2="26.97"/>
+		<line x1="77.52" y1="28.41" x2="82.94" y2="28.4"/>
+		<line x1="77.47" y1="33.67" x2="81.12" y2="33.66"/>
+		<line x1="79.47" y1="35.07" x2="81.23" y2="35.06"/>
+	</g>
+</g>
+<g id="Speed" class="mainLine">
+	<line id="s1" x1="23.36" y1="13.24" x2="1.36" y2="13.24"/>
+	<line id="s2" x1="23.36" y1="15.52" x2="1.36" y2="15.52"/>
+	<line id="s3" x1="23.36" y1="17.79" x2="1.36" y2="17.79"/>
+	<line id="s4" x1="23.36" y1="20.05" x2="1.36" y2="20.05"/>
+	<line id="s5" x1="23.36" y1="22.32" x2="1.36" y2="22.32"/>
+	<line id="s6" x1="23.36" y1="24.58" x2="1.36" y2="24.58"/>
+</g>
+</svg>
